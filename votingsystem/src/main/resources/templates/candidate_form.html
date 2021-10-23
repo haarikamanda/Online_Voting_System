@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sign Up - CodeJava</title>
+    <style>
+        body{
+    background-image: url(bg12.png);
+    }
+    h1{
+    text-align:center;
+    font-family:marsek;
+    
+    font-size: 35px;
+    text-decoration-style: bold;
+    box-sizing: border-box;
+    outline-width: 25px;
+    
+
+}
+    
+    </style>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+      <style> 
+body{
+	  background-color: #FFFACD;
+	
+}</style>
+</head>
+<body>
+    <div class="container text-center">
+        <div>
+            <h1>Candidate Registration - Sign Up</h1>
+        </div>
+        <form th:action="@{/candidate_process_register}" th:object="${candidate}"
+            method="post" style="max-width: 600px; margin: 0 auto;">
+        <div class="m-3">
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Candidate Id: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{id}" class="form-control" required />
+                </div>
+            </div>
+             
+        
+            <div class="form-group row">
+                <label class="col-4 col-form-label"> Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{name}" class="form-control"
+                            required maxlength="20"/>
+                </div>
+            </div>
+            
+             
+            <div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

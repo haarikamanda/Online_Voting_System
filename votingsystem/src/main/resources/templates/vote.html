@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" th:href="@{../static/css/style_votePage.css}">
+<style>h1{
+	text-align:center;
+	font-family:marsek;
+	
+	font-size: 35px;
+	text-decoration-style: bold;
+	/*border:0.9px solid black;*/
+	box-sizing: border-box;
+	outline-width: 25px;
+	
+
+}
+h3{
+	text-align: center;
+	font-family:marsek;
+
+
+}
+.user{
+	text-align:center;
+	font-family:marsek;
+	font-size:20px;
+	
+	box-sizing: border-box;
+	border: solid black 3px;
+	padding: 3px;
+	background-color: #2A8BD5;
+	/*align-self: center;*/
+	/*display:flex;
+	flex-direction:column;
+	width:fit-content;
+	padding:4px;*/
+	
+	
+	
+
+}
+.admin{
+	text-align:center;
+	font-family:marsek;/*
+	box-sizing: content-box;
+	width: 25%;
+	line-height: 200%;
+	border: solid black 3px;
+	padding: 0.5px;
+	position: absolute;
+	left:550px;top:370px;*/
+
+	/*display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:fit-content;
+	padding:4px;
+	align-items: center;	*/	
+	
+	font-size:20px;
+	background-color: #D5742A;
+border: solid black 3px;
+	padding: 3px;
+
+	
+	
+	
+
+}
+.logout{
+	text-align:center;
+	font-family:marsek;/*
+	box-sizing: content-box;
+	width: 30%;
+	line-height: 275%;
+	border: solid black 3px;
+	padding: 2px;
+	position:absolute;
+	box-align:center;
+	left:500px;
+	top:390px;*/
+	/*display:flex;
+	flex-direction:column;
+	font-size:20px;
+	
+	width:fit-content;
+	padding:4px;*/
+	background-color: #E94F54;
+border: solid black 3px;
+	padding: 3px;
+
+	
+
+}
+
+body{
+	  background-color: #FFFACD;
+	
+}
+.flexing{
+	display:flex;
+	justify-content:space-between;
+
+}
+</style>
+
+<style> 
+input[type=submit]{
+  background-color: #F9DC90;
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+	<h1>ONLINE VOTING SYSTEM</h1><hr>
+	<h3>Welcome to the home page</h3><br><br><br><br>	
+
+<div class="flexing">
+<div class="user">USER PORTAL<br><br><br>
+<form action="#" th:action="@{/doLogin}" method="post">
+<!-- <input type="text" name="name" />--> 
+<input type="submit" value="Proceed for Voting"  /><br><br>
+
+</form></div>
+
+<div class="admin">ADMIN PORTAL
+
+<form action='#' th:action="@{/electionresults}" method="post">
+<input type="submit" value="Election Results"/>
+</form>
+
+<form action='#' th:action="@{/userregistration}" method="post">
+<input type="submit" value="User Registration- Admin access"/>
+</form>
+
+<form action='#' th:action="@{/candidateregistration}" method="post">
+<input type="submit" value="Candidate Registration- Admin access"/>
+</form>
+</div>
+<div class="logout">Logout from Portal<br><br><br>
+
+
+<form action='#' th:action="@{/logout}" method="post">
+<input type="submit" value="LOGOUT"/>
+</form></div>
+</div>
+
+</body>
+</html>

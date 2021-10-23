@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Results Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+   background-color: #FFFACD;
+    }
+
+	a{
+    align-content: center;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+h3{
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1{
+    text-align:center;
+    font-family:marsek;
+    
+    font-size: 35px;
+    text-decoration-style: bold;
+    /*border:0.9px solid black;*/
+    box-sizing: border-box;
+    outline-width: 25px;
+    
+
+}
+input[type=submit]{
+            background-color: #1EAE98;
+            border-radius: 8px;
+            color: black;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+            justify-content: center;
+
+           
+        }
+        .centering{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  
+}
+
+
+	</style>
+</head>
+<body>
+
+	<h1>ONLINE VOTING SYSTEM</h1><hr><br><br>
+<h3>The number of votes cast for each candidate is:</h3>
+<div th:each="candidate : ${candidates}">
+ <a th:text="${candidate.name}" > </a> <a th:text="${candidate.numberofvotes}"></a>
+</div>
+<div class="centering">
+
+  <form action='#' th:action="@{/}" method="post">
+<input type="submit" value=" Go back to home"/>
+</form>
+</div>
+     
+</body>
+</html>

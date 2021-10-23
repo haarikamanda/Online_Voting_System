@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Error</title>
+<style>
+
+ body{
+    background-color: #FFFACD;
+    
+    }
+
+    h1{
+	text-align:center;
+	font-family:marsek;
+	
+	font-size: 35px;
+	text-decoration-style: bold;
+	/*border:0.9px solid black;*/
+	box-sizing: border-box;
+	outline-width: 25px;
+	
+
+}
+h2{
+        text-align: center;
+        color:  #91091E;
+        font-weight: bold;
+        font-size: 50px;
+     }
+
+     input[type=submit]{
+            background-color: #1EAE98;
+            border-radius: 8px;
+            color: black;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+
+           
+        }
+        .formpage{
+	text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+	<h1>ONLINE VOTING SYSTEM</h1><hr><br><br>
+<h2 style="font-size:40px; color: red;"> You have already voted</h1>
+	<div class="formpage">
+
+<form action='#' th:action="@{/}" method="post">
+<input type="submit" value=" Return to Home Page"/>
+</form>
+</div>
+</body>
+</html>
