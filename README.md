@@ -16,6 +16,10 @@ the help of MySQL. A database is a well organised assembly of data for hassle fr
 management. Structured Query Language is most commonly used for handling data in a 
 database. The spring framework provides the structure to integrate all the three layers. 
 
+Installation and Requirements:
+
+Java 11 and Spring Boot 3.0.0 are required for running the system. 
+
 
 ![image](https://user-images.githubusercontent.com/69581719/206269691-cf213d56-3510-4b9b-ae8d-e211340b4e91.png)
 
